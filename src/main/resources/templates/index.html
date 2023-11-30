@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de notas Alunos</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="/css/non-responsive.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/css/estilo.css" rel="stylesheet" />
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div id="wrapper">
+
+    <h1>Sistema de notas Alunos</h1>
+
+
+    <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th><span>Id</span></th>
+                <th><span>Nome</span></th>
+                <th><span>Sobre nome</span></th>
+                <th><span>Ano escolar</span></th>
+                <th><span>Idade</span></th>
+                <th><span>Nota geral</span></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="estudante: ${estudantes}">
+            <td th:text="${estudante.Id}">Id</td>
+            <td class="lalign" th:text="${estudante.nome}">Nome</td>
+            <td class="lalign" th:text="${estudante.sobreNome}">Sobre Nome</td>
+            <td th:text="${estudante.anoEscolar}">Ano escolar</td>
+            <td th:text="${estudante.idade}">Idade</td>
+            <td th:text="${estudante.primeiraNota}">Nota geral</td>
+            <td>
+                <a th:href="@{'/editar/'+ ${estudante.id}}" class="button green"><span><i class="fa fa-edit"></i></span></a>
+
+                <a th:href="@{'/deletar/'+ ${estudante.id}}" class="button red"><span><i class="fa fa-trash"></i></span></a>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="custom-btn btn-1">
+    <a href="novo">Cadastrar novo estudante</a>
+</div>
+</body>
+</html>

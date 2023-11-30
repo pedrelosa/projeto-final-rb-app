@@ -16,7 +16,7 @@ public class Estudante {
     private String nome;
     private String sobreNome;
 
-    private LocalDate dataNascimento;
+    private Integer idade;
 
     @Enumerated(EnumType.STRING)
     private AnoEscolar anoEscolar;
