@@ -3,15 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Sistema de notas Alunos</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-
-    <link href="/css/non-responsive.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="/css/estilo.css" rel="stylesheet" />
-
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -29,7 +20,12 @@
                 <th><span>Sobre nome</span></th>
                 <th><span>Ano escolar</span></th>
                 <th><span>Idade</span></th>
-                <th><span>Nota geral</span></th>
+                <th><span>Prineira nota</span></th>
+                <th><span>Peso da primeira nota</span></th>
+                <th><span>Segunda nota</span></th>
+                <th><span>Peso da segunda nota</span></th>
+                <th><span>Terceira nota</span></th>
+                <th><span>Peso da terceira nota</span></th>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +36,12 @@
             <td class="lalign" th:text="${estudante.sobreNome}">Sobre Nome</td>
             <td th:text="${estudante.anoEscolar}">Ano escolar</td>
             <td th:text="${estudante.idade}">Idade</td>
-            <td th:text="${estudante.primeiraNota}">Nota geral</td>
+            <td th:text="${estudante.primeiraNota}">Primeira nota</td>
+            <td th:text="${estudante.pesoPrimeiraNota}">Peso primeira nota</td>
+            <td th:text="${estudante.segundaNota}">Segunda nota</td>
+            <td th:text="${estudante.pesoSegundaNota}">Peso segunda nota</td>
+            <td th:text="${estudante.terceiraNota}">Terceira nota</td>
+            <td th:text="${estudante.pesoTerceiraNota}">Peso terceira nota</td>
             <td>
                 <a th:href="@{'/editar/'+ ${estudante.id}}" class="button green"><span><i class="fa fa-edit"></i></span></a>
 
