@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Sistema de notas Alunos</title>
+    <link href="../static/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="../static/non-responsive.css" rel="stylesheet"/>
+
+    <link href="../static/estilo.css" type="text/css" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,19 +21,20 @@
 
     <table id="keywords" cellspacing="0" cellpadding="0">
         <thead>
-            <tr>
-                <th><span>Id</span></th>
-                <th><span>Nome</span></th>
-                <th><span>Sobre nome</span></th>
-                <th><span>Ano escolar</span></th>
-                <th><span>Idade</span></th>
-                <th><span>Prineira nota</span></th>
-                <th><span>Peso da primeira nota</span></th>
-                <th><span>Segunda nota</span></th>
-                <th><span>Peso da segunda nota</span></th>
-                <th><span>Terceira nota</span></th>
-                <th><span>Peso da terceira nota</span></th>
-            </tr>
+        <tr>
+            <th><span>Id</span></th>
+            <th><span>Nome</span></th>
+            <th><span>Sobre nome</span></th>
+            <th><span>Ano escolar</span></th>
+            <th><span>Idade</span></th>
+            <th><span>Primeira nota</span></th>
+            <th><span>Peso da primeira nota</span></th>
+            <th><span>Segunda nota</span></th>
+            <th><span>Peso da segunda nota</span></th>
+            <th><span>Terceira nota</span></th>
+            <th><span>Peso da terceira nota</span></th>
+            <th><span>Ações</span></th>
+        </tr>
         </thead>
         <tbody>
 
@@ -46,9 +54,6 @@
                 <a th:href="@{'/editar/'+ ${estudante.id}}" class="button green"><span><i class="fa fa-edit"></i></span></a>
 
                 <a th:href="@{'/deletar/'+ ${estudante.id}}" class="button red"><span><i class="fa fa-trash"></i></span></a>
-            </td>
-            <td>
-
             </td>
         </tr>
 

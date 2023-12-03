@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/salvar}" th:object="${estudante}" method="post">
+    <h1>Cadastrar novo Aluno</h1>
+
+    <label>Primeiro nome</label> <br> <input type="text" th:field="*{nome}" placeholder="" /><br>
+    <label>Sobre-nome</label> <br> <input type="text" th:field="*{sobreNome}" placeholder="" /><br>
+    <label>Idade</label> <br> <input type="number" th:field="*{idade}" placeholder="" max="20" min="14" /><br><br>
+<!--    <label>Ano Escolar</label> <br>-->
+<!--    <select th:field="*{anoEscolar}">-->
+<!--        <option th:each="anoEscolar : ${T(com/example/projetofinalrbapp/model/AnoEscolar.java).values()}" th:value="${anoEscolar}" th:text="${anoEscolar}">Ano Escolar</option>-->
+<!--    </select><br><br>-->
+    <label>Primeira nota</label> <br> <input type="number" th:field="*{primeiraNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoPrimeiraNota}" value="1" max="3" min="1" /><br><br>
+    <label>Segunda nota</label> <br> <input type="number" th:field="*{segundaNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoSegundaNota}" value="1" max="3" min="1" /><br><br>
+    <label>Terceira nota</label> <br> <input type="number" th:field="*{terceiraNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoTerceiraNota}" value="1" max="3" min="1" /><br><br>
+
+    <button type="submit">Submit</button> <a href="/" class="button">cancelar</a>
+
+</form>
+
+</body>
+</html>
