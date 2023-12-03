@@ -60,4 +60,10 @@ public class AppController {
         return mav;
     }
 
+    @RequestMapping(value="/deletar/{id}")
+    public String deletarEstudantePorId(@PathVariable(name="id") Long id) {
+        service.deletarPorId(id);
+        return "redirect:/";
+    }
+
 }

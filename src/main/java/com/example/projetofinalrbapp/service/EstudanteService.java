@@ -32,7 +32,7 @@ public class EstudanteService {
         return eRepo.findById(id).get();
     }
 
-    public void deletar(Long id) {
+    public void deletarPorId(Long id) {
         eRepo.deleteById(id);
     }
 
