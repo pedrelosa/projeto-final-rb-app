@@ -50,8 +50,8 @@ public class AppController {
 
 
     @RequestMapping("/editar/{id}")
-    public ModelAndView editarIdEstudante(@PathVariable(name = "id") long id){
-        ModelAndView mav = new ModelAndView("cadastrar-estudante");
+    public ModelAndView editarIdEstudante(@PathVariable(name = "id") Long id){
+        ModelAndView mav = new ModelAndView("editar-estudante");
 
         Estudante estudante = service.modificar(id);
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="br">
+<head>
+    <meta charset="UTF-8">
+    <title>Edição</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/salvar}" th:object="${estudante}" method="post">
+    <h1>Editar Estudante</h1>
+    <label>Id:</label> <br> <input type="text" th:field="*{id}" readonly="readonly"><br>
+    <label>Sobre-nome</label> <br> <input type="text" th:field="*{sobreNome}" placeholder="" /><br>
+    <label>Idade</label> <br> <input type="number" th:field="*{idade}" placeholder="" max="20" min="14" /><br><br>
+    <label>Primeira nota</label> <br> <input type="number" th:field="*{primeiraNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoPrimeiraNota}" value="1" max="3" min="1" /><br><br>
+    <label>Segunda nota</label> <br> <input type="number" th:field="*{segundaNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoSegundaNota}" value="1" max="3" min="1" /><br><br>
+    <label>Terceira nota</label> <br> <input type="number" th:field="*{terceiraNota}" max="10" min="0" /><br>
+    <label>peso</label> <br> <input type="number" th:field="*{pesoTerceiraNota}" value="1" max="3" min="1" /><br><br>
+
+    <button type="submit">Submit</button> <a href="/" class="button">cancelar</a>
+
+</form>
+
+</body>
+</html>
